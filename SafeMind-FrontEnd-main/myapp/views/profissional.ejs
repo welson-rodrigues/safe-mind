@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Cadastrar Profissional</title>
+		<link rel="stylesheet" href="/stylesheets/stylePacient.css" />
+	</head>
+	<body>
+		<%- include('../partials/Mental health-bro 1.ejs') %>
+
+		<section>
+			<h1 class="h1DearP">Querido Profissional!</h1>
+			<form action="/profissionais" method="POST">
+				<input
+					type="nome"
+					id="nome"
+					name="nome"
+					style="display: none"
+					value="<%- nome %>"
+					required
+				/><br /><br />
+
+				<input
+					type="email"
+					id="email"
+					name="email"
+					style="display: none"
+					value="<%- email %>"
+					required
+				/><br /><br />
+
+				<input
+					type="password"
+					id="password"
+					name="senha"
+					required
+					style="display: none"
+					value="<%- password %>"
+				/><br /><br />
+
+				<label for="description">Se descreva brevemente</label>
+				<textarea id="selfDescription" name="descricao"></textarea>
+
+				<label for="description">qual sua principal função</label>
+				<textarea id="selfDescription" name="funcao"></textarea>
+
+				<label for="function">Qual sua especialidade?</label>
+				<textarea id="function" name="especialidade"></textarea>
+
+				<label for="care">Como você lida com seus pacientes??</label>
+				<textarea id="care" name="relacionamento_com_pacientes"></textarea>
+
+				<button type="submit">Cadastrar</button>
+			</form>
+		</section>
+		<%- include('../partials/Contemplating-bro 1.ejs') %>
+
+		<div class="wave"><%- include('../partials/wave.ejs') %></div>
+	</body>
+</html>

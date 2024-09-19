@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Safe Mind</title>
+		<link rel="stylesheet" href="/stylesheets/stylePerfil.css" />
+	</head>
+	<body>
+		<%- include('../partials/navBar.ejs') %>
+
+		<div class="contentGrid">
+			<div class="perfilCard">
+				<%- include('../partials/perfil.ejs') %>
+				<h2><%- userName %></h2>
+				<!-- <a class="btnPerfil" id="meeting" href="#">Agendar</a> -->
+			</div>
+		</div>
+		<div>
+			<div class="descriptionCard">
+				<h2 id="description">Bios</h2>
+				<p><%- userDesc %></p>
+			</div>
+		</div>
+		<section>
+			<div class="specialistsGrid">
+				<div class="perfilCard">
+					<h2>Maior problema</h2>
+					<p><%- userProb %></p>
+				</div>
+			</div>
+
+			<div class="specialistsGrid">
+				<div class="perfilCard">
+					<h2>Hobbies</h2>
+					<p><%- userHobbies %></p>
+				</div>
+			</div>
+			<div class="specialistsGrid">
+				<div class="perfilCard">
+					<h2>Vícios</h2>
+					<p><%- userVicio %></p>
+				</div>
+			</div>
+		</section>
+	</body>
+	<script>
+		let myid = "<%- userId %>";
+
+		let typeUser = "<%- userType %>";
+		sessionStorage.setItem("sessionId", myid);
+		sessionStorage.setItem("sessionType", typeUser);
+	</script>
+</html>

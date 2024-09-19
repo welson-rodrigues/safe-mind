@@ -1,0 +1,80 @@
+@import url("styleHome.css");
+
+.navList li:last-child {
+	color: #80eed3;
+	background-color: #fbfbfb;
+	border-radius: 10px;
+}
+
+.wave path {
+	fill: #5aa492;
+}
+
+.contentGrid {
+	background-color: #3d6b61;
+	border-radius: 10px 10px 0px 0px;
+	color: #d9d9d9;
+	width: 1324px;
+	padding: 10px;
+	margin-left: 300px;
+	margin-top: 100px;
+}
+
+.perfilCard {
+	padding: 10px;
+	text-align: center;
+}
+
+#meeting {
+	position: absolute;
+	right: 320px;
+	top: 230px;
+	animation: none;
+}
+
+.descriptionCard {
+	padding: 10px;
+	height: 150px;
+	width: 1324px;
+	margin-left: 300px;
+	border-radius: 0px 0px 10px 10px;
+	text-align: center;
+	transition: 500ms;
+	background-color: #2f5950;
+}
+
+#description {
+	margin-top: -20px;
+	margin-left: 450px;
+	width: 30%;
+	border-radius: 10px;
+	background-color: #24413b;
+	padding: 10px;
+}
+
+section {
+	display: flex;
+	flex-direction: row;
+}
+
+.specialistsGrid {
+	background-color: #3d6b61;
+	padding: 10px;
+	height: 345px;
+	border-radius: 10px;
+	width: 500px;
+	background-color: #2f5950;
+	margin-left: 95px;
+	margin-top: 30px;
+}
+
+h2:first-child {
+	color: #ffffff;
+	background-color: #24413b;
+	border-radius: 10px;
+}
+
+p {
+	margin-top: 20px;
+	color: #fbfbfb;
+}

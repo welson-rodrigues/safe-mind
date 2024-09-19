@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Safe Mind</title>
+		<link rel="stylesheet" href="/stylesheets/styleMeeting.css" />
+	</head>
+	<body>
+		<%- include('../partials/navBar.ejs') %> 
+        <%- include('../partials/navBarWave.ejs') %>
+
+		<div class="contentGrid">
+			<div class="dayEndLocal">
+				<h2> Horários e locais</h2>
+			</div>
+            <section class="localContainer">
+                <ul class="navList">
+                    <li class="dayEndLocalLi"><p>Data 12/06 ás 13h a 14h - Hospital tal</p></li>
+                    <li><a style="display: none;" class="meeting" href="#" >Agendar</a></li>
+                </ul>
+                <ul class="navList">
+                    <li class="dayEndLocalLi"><p>Data 12/06 ás 13h a 14h - Consultório tal</p></li>
+                    <li><a  style="display: none;" class="meeting" href="#" >Agendar</a></li>
+                </ul>
+				<ul class="navList">
+                    <li class="dayEndLocalLi"><p>Data 12/06 ás 13h a 14h - Consultório tal</p></li>
+                    <li><a style="display: none;" id="myBtn" class="meeting" href="#" >Agendar</a></li>
+                </ul>
+					<%- include('../partials/meetingDetails.ejs') %>
+            </section>
+		</div>
+		</section>
+	</body>
+	<!-- <script src="/javascripts/modal.js"></script> -->
+</html>

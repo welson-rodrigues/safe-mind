@@ -1,0 +1,43 @@
+@import url("styleHome.css");
+
+.navList li:last-child {
+	background-color: #fbfbfb;
+}
+
+.navList li:first-child {
+	background-color: #e9bf2957;
+	border-radius: 10px;
+}
+
+.banner {
+	background-color: #e9c029;
+}
+
+.btnPerfil {
+	background-color: #e9c029;
+}
+
+
+.btnPerfil:hover {
+	background-color: #e9c029;
+}
+
+@keyframes highlight {
+	0% {
+		background-color: #e9c029;
+	}
+	50% {
+		background-color: #f7cd37;
+	}
+	100% {
+		background-color: #e9c029;
+	}
+}
+
+a:hover {
+	color: #796313;
+}
+
+.wave path {
+	fill: #e9c029;
+}

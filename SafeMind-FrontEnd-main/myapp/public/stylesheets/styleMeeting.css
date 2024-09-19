@@ -1,0 +1,140 @@
+@import url("stylePerfil.css");
+
+.localContainer {
+	display: flex;
+	flex-direction: column;
+}
+
+.contentGrid {
+	border-radius: 10px;
+}
+
+h2:first-child {
+	background-color: #3d6b61;
+}
+
+.navList {
+	display: flex;
+	justify-content: space-between;
+	padding: 20px;
+}
+
+.navList .meeting {
+	color: #ffffff;
+}
+
+.navList li:nth-child(2) {
+	background-color: #e7e7e7;
+	border-radius: 10px;
+}
+
+.navList .meeting:hover {
+	color: #5aa492;
+}
+
+.navbar {
+	margin-bottom: 250px;
+}
+
+.localContainer {
+	background-color: #1d3c35;
+	border-radius: 10px;
+}
+
+p {
+	font-weight: bold;
+}
+
+.meeting {
+	background-color: #80eed3;
+}
+
+/* The Modal */
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgb(0, 0, 0);
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Modal Box */
+.modal-content {
+	border-radius: 10px;
+	color: black;
+	background-color: #ffffff;
+	margin: 15% auto;
+	padding: 20px;
+	width: 30%;
+}
+
+.close {
+	color: #aaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+button {
+	width: 414px;
+	height: 65px;
+	padding: 10px;
+	margin-top: 65px;
+	background-color: #66e2d5;
+	color: white;
+	font-size: 2rem;
+	font-weight: bold;
+	border: none;
+	border-radius: 10px;
+	cursor: pointer;
+	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+	transition: background-color 0.3s ease;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: white;
+	padding: 20px;
+	border-radius: 10px;
+	width: 100%;
+	max-width: 450px;
+}
+
+label {
+	font-size: 1rem;
+	font-weight: bolder;
+	color: #333;
+	margin-bottom: 5px;
+	align-self: flex-start;
+}
+
+textarea {
+	width: 100%;
+	height: 71px;
+	padding: 27px;
+	font-size: 1rem;
+	border: 1px solid #000;
+	border-radius: 10px;
+	outline: none;
+	resize: none;
+	transition: border-color 0.3s ease;
+}
+
+textarea:focus {
+	border-color: #66e2d5;
+	transition: border-color 0.3s ease;
+}

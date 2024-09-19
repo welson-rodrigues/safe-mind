@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Cadastrar Paciente</title>
+		<link rel="stylesheet" href="/stylesheets/stylePacient.css" />
+	</head>
+	<body>
+		<%- include('../partials/Mental health-bro 1.ejs') %>
+
+		<section>
+			<h1 class="h1DearP">Querido Paciente!</h1>
+			<form action="/pacientes" method="POST">
+				<input
+					type="nome"
+					id="nome"
+					name="nome"
+					style="display: none"
+					value="<%- nome %>"
+					required
+				/><br /><br />
+
+				<input
+					type="email"
+					id="email"
+					name="email"
+					style="display: none"
+					value="<%- email %>"
+					required
+				/><br /><br />
+
+				<input
+					type="password"
+					id="password"
+					name="senha"
+					required
+					style="display: none"
+					value="<%- password %>"
+				/><br /><br />
+				<label for="descricao">Se descreva brevemente</label>
+				<textarea id="selfDescription" name="descricao"></textarea>
+
+				<label for="maior_problema"
+					>Qual você considera o seu maior problema?</label
+				>
+				<textarea id="bigProblem" name="maior_problema"></textarea>
+
+				<label for="hobbies">Quais seus hobbies?</label>
+				<textarea id="hobbies" name="hobbies"></textarea>
+
+				<label for="vicios">Quais seus vícios?</label>
+				<textarea id="adiction" name="vicios"></textarea>
+
+				<button type="submit">Cadastrar</button>
+			</form>
+		</section>
+		<%- include('../partials/Contemplating-bro 1.ejs') %>
+
+		<!-- <div class="wave"><%- include('../partials/wave.ejs') %></div>-->
+	</body>
+</html>

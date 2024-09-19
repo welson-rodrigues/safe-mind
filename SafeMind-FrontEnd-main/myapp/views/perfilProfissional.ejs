@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Safe Mind</title>
+		<link rel="stylesheet" href="/stylesheets/stylePerfil.css" />
+	</head>
+	<body>
+		<!--<%- include('../partials/navBarProfissional.ejs') %>--> 
+		<div id="navbar-container"></div>
+        <%- include('../partials/navBarWave.ejs') %>
+
+		<div class="contentGrid">
+			<div class="perfilCard">
+				<%- include('../partials/perfil.ejs') %>
+				<h2><%- userName %></h2>
+				<p>				
+					Contato com profissional: <%- userEmail %>
+				</p>
+				<!--<a class="btnPerfil" id="meeting" href="#">Adicionar seus horários</a>-->
+			</div>
+		</div>
+		<div>
+			<div class="descriptionCard">
+				<h2 id="description">Descrição breve do profissional</h2>
+				<p>
+					<%- userDesc %>
+				</p>
+			</div>
+		</div>
+		<section>
+			<div class="specialistsGrid">
+				<div class="perfilCard">
+					<h2>Funções</h2>
+					<p>
+						<%- userFunc %>
+					</p>
+				</div>
+			</div>
+
+			<div class="specialistsGrid">
+				<div class="perfilCard">
+					<h2>Especialidades</h2>
+					<p>
+						<%- userEspc %>
+					</p>
+				</div>
+			</div>
+			<div class="specialistsGrid">
+				<div class="perfilCard">
+					<h2>Comportamento profissional</h2>
+					<p>
+						<%- userRela %>
+					</p>
+				</div>
+			</div>
+		</section>
+	</body>
+	<script>
+
+
+		let myid = sessionStorage.getItem("sessionId")
+		let myidnew = ""
+		if(!myid){
+			myidnew = 	"<%- userId %>"
+
+		}
+		let typeUser = "<%- userType %>"
+
+		if(myidnew && typeUser){
+			sessionStorage.setItem("sessionId", myidnew)
+			sessionStorage.setItem("sessionType", typeUser)
+		}
+
+        const userType = sessionStorage.getItem("sessionType");
+
+        if (userType === 'paciente') {
+            // Renderiza a navbar do paciente
+            document.getElementById('navbar-container').innerHTML = `<%- include('../partials/navBar.ejs') %>`;
+        } else if (userType === 'profissional') {
+            // Renderiza a navbar do profissional
+            document.getElementById('navbar-container').innerHTML = `<%- include('../partials/navBarProfissional.ejs') %>`;
+        } else {
+            // Se o tipo de usuário for inválido ou não estiver no sessionStorage
+            console.log('Tipo de usuário inválido.');
+        }
+    </script>
+</html>

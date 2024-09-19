@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Login</title>
+		<link rel="stylesheet" href="/stylesheets/styleLogin.css" />
+	</head>
+	<body>
+		<%- include('../partials/Contemplating-bro 1.ejs') %>
+
+		<section>
+			<h1>Login</h1>
+			<form action="/login" method="POST">
+				<label for="email">Email:</label>
+				<input type="email" id="email" name="email" required />
+
+				<label for="password">Senha:</label>
+				<input type="password" id="password" name="password" required />
+
+				<input name="type_user" value="paciente" type="radio" />
+				<label for="type_user">Paciente</label>
+				<input name="type_user" value="profissional" type="radio" />
+				<label for="type_user">Profissional</label>
+
+				<button type="submit">Login</button>
+			</form>
+			<div class="footer">
+				<p style="color: #da4040">
+					Não tem conta ainda? <a href="/singup">cadastre-se</a>
+				</p>
+			</div>
+		</section>
+		<%- include('../partials/Mental health-bro 1.ejs') %>
+
+		<div class="wave"><%- include('../partials/wave.ejs') %></div>
+	</body>
+</html>

@@ -1,0 +1,9 @@
+@import url("stylePerfils.css");
+
+#meeting {
+	position: relative;
+	animation: none;
+	transform: scale(0.6, 0.6);
+	margin-top: -23px;
+	margin-right: -100px;
+}

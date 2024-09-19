@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Safe Mind</title>
+		<link rel="stylesheet" href="/stylesheets/styleProfissionalsPage.css" />
+	</head>
+	<body>
+		<div><%- include('../partials/navBar.ejs') %></div>
+		<div><%- include('../partials/navBarWave.ejs') %></div>
+
+		<section class="specialistsSection">
+			<h2>Profissionais da saúde mental</h2>
+			<div class="specialistsGrid">
+				<% profissionais.forEach(function(profissional) { %>
+				<div class="specialistCard">
+					<div class="specialistInfo">
+						<div class="avatar">👤</div>
+						<a href="/profissionais/<%= profissional.id %>">
+							<h3><%= profissional.nome %></h3>
+						</a>
+
+						<p><%= profissional.descricao %></p>
+					</div>
+				</div>
+				<% }) %>
+			</div>
+		</section>
+
+		<div><%- include('../partials/navBarWave.ejs') %></div>
+	</body>
+	<script>
+		let aa = sessionStorage.getItem("sessionId");
+		let bb = sessionStorage.getItem("sessionType");
+		console.log(aa, bb);
+	</script>
+</html>

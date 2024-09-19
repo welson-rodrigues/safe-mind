@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Cadastro</title>
+		<link rel="stylesheet" href="/stylesheets/styleSingup.css" />
+	</head>
+	<body>
+		<%- include('../partials/Contemplating-bro 1.ejs') %>
+
+		<section>
+			<h1>Cadastro</h1>
+			<form action="/singup" method="POST">
+				<label for="name">Nome:</label>
+				<input type="name" id="nome" name="name" required /><br /><br />
+
+				<label for="email">Email:</label>
+				<input type="email" id="email" name="email" required /><br /><br />
+
+				<label for="password">Senha:</label>
+				<input
+					type="password"
+					id="password"
+					name="password"
+					required
+				/><br /><br />
+
+				<label for="password">Confirmar Senha:</label>
+				<input
+					type="password"
+					id="password-confirm"
+					name="password-confirm"
+					required
+				/><br /><br />
+
+				<input name="type_user" value="paciente" type="radio" />
+				<label for="type_user">Paciente</label>
+				<br />
+				<input name="type_user" value="profissional" type="radio" />
+				<label for="type_user">Profissional</label>
+
+				<button type="submit">cadastrar</button>
+			</form>
+			<div class="footer">
+				<p style="color: #da4040">
+					Já tem uma conta?? <a href="/">fazer login</a>
+				</p>
+			</div>
+		</section>
+		<%- include('../partials/Mental health-bro 1.ejs') %>
+
+		<!--<div class="wave">
+			<%- include('../partials/wave.ejs') %> 
+		</div> -->
+	</body>
+</html>
